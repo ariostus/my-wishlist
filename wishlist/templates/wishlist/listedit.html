@@ -1,0 +1,30 @@
+{% extends "generic.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    <div class="form-div" >{% render_field form.title class="name-input"  %}</div>
+    <div class="form-div">{% render_field form.description rows="5" class="notes-input" %}</div>
+    
+    
+
+    <div class="form-div"> 
+        <input type="submit" value="Save" class="btn-save" style="float:right">   
+    </div>   
+</form>
+
+
+<div class="form-div">
+    <a href="../"><button class="btn-save" style="float: left;">Back</button></a>
+</div>
+
+<div class="form-div">
+    <a href="{% url 'list-delete' username list.id %}"><button class="btn-save-round" style="margin:auto">
+        <span class="material-symbols-outlined" style="font-size: 1.5em;">delete</span>
+    </button></a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "generic.html" %}
+
+{% block content %}
+
+<div class="list-head">
+    <h2><b>{{list.title}}</b></h2>
+    <h4>{{object_list|length}} wishes</h3ì>
+    
+    <hr style="margin-top:5%"> 
+</div>
+
+<div class="all-items">
+{% for wish in object_list %}
+
+
+<div class="list-item" >
+    
+    
+    <a href="{% url 'wish-detail' list.author list.id wish.id %}" class="no-under">
+        <p class="inline-p inline-t">
+            <b>{{wish.name}}</b><small>&nbsp&nbsp&nbsp{{wish.date|date:"d/m/y"}}</small>
+        </p>
+    
+
+        <p class="inline-p notes">
+            {{wish.notes}}
+        </p>
+    </a>
+
+    {% if wish.link %}
+    <a href="{{wish.link}}" target="_blank">
+        <p class="inline-p inline-url" >buy here</p>
+
+    </a>
+    {% endif %}
+
+    
+
+    {% if wish.status %}
+        <span class="material-symbols-outlined completed">check_circle</span>
+    {% endif %}
+   
+</div>
+<hr>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+
+{% block bottom %}
+<div class="list-item add-btn" style="margin-top: 5%;">
+    <a href="{% url 'add-wish' list.author list.id %}" class="no-under">Add new</a>
+</div>
+{% endblock %}
+
+
+
+
+

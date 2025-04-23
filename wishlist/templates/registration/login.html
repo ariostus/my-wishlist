@@ -1,0 +1,35 @@
+{% extends "generic.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <h3>Your username and password didn't match. Please try again.</h3>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <!-- <p>Please login to see this page.</p> -->
+    {% endif %}
+  {% endif %}
+
+  <form method="post" action="{% url 'login' %}" class="log-form">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    <div class="form-div">
+      <label class="user-lab">Username</label>
+      {{form.username|add_class:"user-input"}}
+    </div>
+    <div class="form-div">
+      <label class="user-lab">Password</label>
+      {{form.password|add_class:"user-input"}}
+    </div>
+    <input type="submit" value="Login" class="btn-save" style="margin: auto; margin-top: 20%;">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+  
+
+{% endblock %}

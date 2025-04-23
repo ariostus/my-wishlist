@@ -1,0 +1,48 @@
+{% extends "generic.html" %}
+
+{% block content %}
+
+<div class="list-head">
+    <h2>{{username}}'s Wishlists</h2>
+    <h4>{{user_lists|length}} list{{user_lists|length|pluralize}}</h4>
+    
+    <hr style="margin-top:5%"> 
+</div>
+
+<div class="all-items">
+{% for wishlist in user_lists %}
+<a href="{% url 'wish-list' username wishlist.id %}" class="no-under">
+    <div class="list-item">
+        <p class="inline-p">
+            <b>{{wishlist.title}}</b>
+        </p>
+        
+        <p class="inline-p notes">{{wishlist.description}}</di>
+        <a href="{% url 'list-edit' username wishlist.id%}" class="no-under">
+            
+            <!-- <button class="btn-del">
+                <span class="material-symbols-outlined">delete</span>
+            </button> -->
+
+            <button class="btn-del">
+                <span class="material-symbols-outlined" style="font-size: 1em;">edit</span>
+            </button>
+            
+        </a>
+    </div>
+</a>
+<hr>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block bottom %}
+<div class="list-item add-btn">
+    <a href="{% url 'list-add' username %}" class="no-under">Add New</i>
+</div>
+{% endblock %}
+
+
+
+
+

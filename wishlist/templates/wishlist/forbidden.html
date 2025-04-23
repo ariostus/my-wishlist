@@ -1,0 +1,13 @@
+{% extends "generic.html" %}
+
+{% block content %}
+<h3>Sorry {{request.user}}, you are not allowed to edit this!</h3>
+<a href="../" class="no-under">
+    <button class="btn-save" style="margin: auto; margin-top: 20%">
+        Back
+    </button>
+</a>
+
+
+
+{% endblock %}
