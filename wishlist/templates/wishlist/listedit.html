@@ -17,11 +17,11 @@
 
 
 <div class="form-div">
-    <a href="../"><button class="btn-save" style="float: left;">Back</button></a>
+    <a href="../" class="no-under"><button class="btn-save" style="float: left;">Back</button></a>
 </div>
 
 <div class="form-div">
-    <a href="{% url 'list-delete' username list.id %}"><button class="btn-save-round" style="margin:auto">
+    <a href="{% url 'list-delete' username list.id %}" class="no-under"><button class="btn-save-round" style="margin:auto">
         <span class="material-symbols-outlined" style="font-size: 1.5em;">delete</span>
     </button></a>
 </div>
