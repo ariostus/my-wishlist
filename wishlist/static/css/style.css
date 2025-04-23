@@ -3,6 +3,8 @@
     --dark: rgb(102, 181, 197);
     --light:rgb(123, 225, 245);
     --textLight: white;
+    touch-action: pan-x pan-y;
+    height: 100%;
     font-size: 14pt;
 }
 
@@ -58,7 +60,9 @@ h4 {
 
 
 hr {
-    color: var(--dark);
+    
+    border: 0px solid var(--dark);
+    border-top-width: .2rem;
 }
 
 
@@ -110,25 +114,11 @@ hr {
     transform: translateZ(0);
 }
 
-.list-head {
-    position: absolute;
-    background-color: inherit;
-    /* z-index: 2; */
-    width: 90%;
-    text-align: center;
-    /* padding-bottom: 5%; */
-    margin:auto;
-    padding-top: 5%;
-    
-    border-top-right-radius: 10% 15%;
-    border-top-left-radius: 10% 15%;
-    margin-top: -5%;
-    /* background-color: red;    */
-}
+
 
 .no-under {
     text-decoration: none;
-    color: var(--textDark);
+    color: inherit;
 }
 
 .a-colour {
@@ -306,10 +296,25 @@ hr {
     width: 100%;
 }
 
-
+.list-head {
+    /* position: relative; */
+    background-color: inherit;
+    /* z-index: 2; */
+    width: 100%;
+    text-align: center;
+    /* padding-bottom: 5%; */
+    margin: auto;
+    padding-top: 5%;
+    font-size: .9em;
+    /* border-top-right-radius: 10% 15%; */
+    /* border-top-left-radius: 10% 15%; */
+    /* margin-top: -5%; */
+    /* background-color: red;    */
+    /* display: block; */
+}
 
 .all-items {
-    margin-top: 30%;
+    margin-top: 0%;
 }
 
 /* WISH DETAIL */
@@ -391,7 +396,7 @@ hr {
     border-radius: 30%/40%;
     text-align: center;
     /* margin-left: 10%; */
-    color: var(--textDark);
+    
     padding: 5%;
     display: block;
     margin: 10%;
