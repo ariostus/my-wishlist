@@ -11,7 +11,7 @@
 {% for u in users %}
 <div class="user">
     <a href="{% url 'user-lists' username=u %}" class="no-under">
-        <img src="{{ u.avatar.url }}" class="userpic">
+        <img src="/static/{{ u.avatar.url }}" class="userpic">
         <p class="username">{{u}}</p>
         {% if u.user.is_superuser %}
         <h4 style="font-style: italic;">superuser</h4>
