@@ -389,6 +389,7 @@ hr {
 .btn-save {
     font-family: inherit;
     font-size: 2.5em;
+    font-weight: 400;
     background-color: var(--dark);
     border: none;
     width: 30%;
