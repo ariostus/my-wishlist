@@ -118,7 +118,7 @@ hr {
 
 .no-under {
     text-decoration: none;
-    color: inherit;
+    color: var(--textDark);
 }
 
 .a-colour {
