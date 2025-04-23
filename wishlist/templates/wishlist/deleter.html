@@ -1,0 +1,20 @@
+{% extends "generic.html" %}
+
+{% block content %}
+<h2>Do you want to delete <i>{{list.title}}</i> ?</h2>
+<p style="font-size: 2em;">All wishes included will be deleted as well.</p>
+
+<form action="" method="post" onchange="this.submit()">
+    {% csrf_token %}
+    <div class="form-div">
+        <input type="submit" value="Yes" class="btn-save" style="float:right;"> 
+    </div>
+    
+</form>
+
+<div class="form-div">
+    <a href="../"><button class="btn-save" style="float:left;">No</button></a>
+</div>
+
+
+{% endblock %}

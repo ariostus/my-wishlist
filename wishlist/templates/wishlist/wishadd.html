@@ -1,0 +1,28 @@
+{% extends "generic.html" %}
+
+{% block content %}
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    <div class="form-div" >{% render_field form.name class="name-input" autofocus=True placeholder="Untitled Wish" %}</div>
+    <div class="form-div">{% render_field form.notes rows="5" class="notes-input" %}</div>
+    <div class="form-div">
+        <p style="font-size: 2em; margin: 0;">Link</p>
+        {{form.link|add_class:"url-input"}}
+    </div>
+    
+
+    <div class="form-div"> 
+        <input type="submit" value="Save" class="btn-save" style="float:right">   
+    </div>   
+</form>
+
+<div class="form-div">
+    <a href="./"><button class="btn-save" style="float: left;">Back</button></a>
+</div>
+
+
+{% endblock %}

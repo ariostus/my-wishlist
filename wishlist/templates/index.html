@@ -1,0 +1,24 @@
+{% extends "generic.html" %}
+{% block content %}
+
+<div class="list-head">
+    <h2>Users</h2>
+    
+    <hr style="margin-top:5%"> 
+</div>
+
+<div class="all-items user-contain">
+{% for u in users %}
+<div class="user">
+    <a href="{% url 'user-lists' username=u %}" class="no-under">
+        <img src="{{ u.avatar.url }}" class="userpic">
+        <p class="username">{{u}}</p>
+        {% if u.user.is_superuser %}
+        <h4 style="font-style: italic;">superuser</h4>
+        {% endif %}
+    </a>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

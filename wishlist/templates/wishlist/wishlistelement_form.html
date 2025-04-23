@@ -1,0 +1,41 @@
+{% extends "generic.html" %}
+
+{% block content %}
+{% load widget_tweaks %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-div">{{form.name|add_class:"name-input"}}</div>
+    <div class="form-div">{% render_field form.notes rows="5" class="notes-input" %}</div>
+    <div class="form-div">
+        <p style="font-size: 2em; margin: 0;">Link</p>
+        {{form.link|add_class:"url-input"}}
+    </div>
+    <div class="form-div" style="font-size: 2em;">
+        Wish realized &nbsp;&nbsp;
+        {{form.status|add_class:"check-box"}}
+    </div>
+
+    <div class="form-div">
+        <input type="submit" value="Save" class="btn-save" style="float:right">
+    </div>
+
+    
+</form>
+<div class="form-div">
+    <a href="./"><button class="btn-save" style="float: left;">Back</button></a>
+</div>
+
+
+
+
+<div class="form-div-special">
+    <form  action="{% url 'wish-delete' object.list.author object.list.id object.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn-save-round" style="margin: auto;">
+            <span class="material-symbols-outlined" style="font-size: 1.5em;">delete</span>
+        </button>
+    </form>
+</div>
+
+{% endblock %}
