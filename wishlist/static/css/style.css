@@ -4,6 +4,8 @@
     --light:rgb(123, 225, 245);
     --textLight: white;
     font-size: 14pt;
+    touch-action: pan-x pan-y;
+    height: 100%;
 }
 
 html {
