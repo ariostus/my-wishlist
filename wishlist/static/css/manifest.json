@@ -5,7 +5,7 @@
     "display": "standalone",
     "scope": "/",
     "icons": [
-        {"src": "wishapp.png"}
+        {"src": "/static/css/wishapp.png"}
         
     ]
 
