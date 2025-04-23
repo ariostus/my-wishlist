@@ -151,13 +151,12 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 
 
-MEDIA_ROOT = BASE_DIR / 'images'
-MEDIA_URL =  '/images/'
+MEDIA_ROOT = STATIC_ROOT
+MEDIA_URL =  "/images/"
 
 
 
 STORAGES = {
-    # ...
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
