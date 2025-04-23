@@ -23,6 +23,8 @@ body {
     width: 100%;
     height: min-content;
     user-select: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -64,7 +66,7 @@ hr {
     margin: auto;
     margin-top: 10%;
     width: 70%;
-    height: max-content;
+    height: min-content;
 }
 
 #content {
@@ -89,8 +91,8 @@ hr {
 #footer {
     /* background-color: red; */
     width: 90%;
-    
-    position: absolute;
+    margin: auto;
+    /* position: absolute; */
     bottom: 0%;
     left: 5%;
     text-align: center;
@@ -104,11 +106,15 @@ hr {
     margin-bottom: 0;
 }
 
+.container {
+    transform: translateZ(0);
+}
+
 .list-head {
-    position: fixed;
+    position: absolute;
     background-color: inherit;
-    z-index: 2;
-    width: 70%;
+    /* z-index: 2; */
+    width: 90%;
     text-align: center;
     /* padding-bottom: 5%; */
     margin:auto;
@@ -117,7 +123,7 @@ hr {
     border-top-right-radius: 10% 15%;
     border-top-left-radius: 10% 15%;
     margin-top: -5%;
-    /* background-color: red; */   
+    /* background-color: red;    */
 }
 
 .no-under {
