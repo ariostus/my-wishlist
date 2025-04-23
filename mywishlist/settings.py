@@ -145,12 +145,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/redirect/'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_ROOT = STATIC_ROOT / 'images'
-MEDIA_URL = STATIC_URL / 'images/'
+
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
+
+
+MEDIA_ROOT = BASE_DIR / 'images'
+MEDIA_URL =  '/images/'
+
 
 
 STORAGES = {
