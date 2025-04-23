@@ -144,6 +144,7 @@ hr {
     font-size: 1.5em;
     text-align: center;
     width: 2em;
+    height: 2em;
     /* height: 8vw; */
     /* padding-top: 10%; */
     /* margin: auto; */
@@ -151,7 +152,11 @@ hr {
     right: 10%;
     top: 5%;
     position: absolute;
-    line-height: 5%;
+    /* line-height: 5%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .loginout:active {
@@ -393,9 +398,9 @@ hr {
     /* margin-top: 20%; */
 }
 
-.btn-save:active {
+/* .btn-save:active {
     color: var(--textLight);
-}
+}*/
 
 .completed {
     /* background-color: red; */
