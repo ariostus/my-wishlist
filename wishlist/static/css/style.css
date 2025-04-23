@@ -128,7 +128,7 @@ hr {
 
 .no-under {
     text-decoration: none;
-    color: inherit;
+    color: var(--textDark);
 }
 
 .a-colour {
@@ -391,7 +391,7 @@ hr {
     border-radius: 30%/40%;
     text-align: center;
     /* margin-left: 10%; */
-    
+    color: var(--textDark);
     padding: 5%;
     display: block;
     margin: 10%;
