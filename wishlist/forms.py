@@ -1,8 +1,8 @@
 from django import forms
 
 class WishUpdate(forms.Form):
-    name = forms.CharField(max_length=100, required=False)
-    notes = forms.CharField(max_length=1000, widget=forms.Textarea, required=False)
+    name = forms.CharField(max_length=11, required=False)
+    notes = forms.CharField(max_length=400, widget=forms.Textarea, required=False)
     link = forms.URLField(required=False)
     status = forms.BooleanField(required=False, initial=False)
     
