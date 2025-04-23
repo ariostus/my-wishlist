@@ -1,0 +1,12 @@
+{
+    "name": "Wishlist&#x2661;",
+    "short_name": "Wishlist&#x2661;",
+    "start_url": "/",
+    "display": "standalone",
+    "scope": "/",
+    "icons": [
+        {"src": "wishapp.png"}
+        
+    ]
+
+}
