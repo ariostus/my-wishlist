@@ -152,7 +152,7 @@ STATIC_URL = '/static/'
 
 
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media/')
-MEDIA_URL =  os.path.join(STATIC_URL, '/media/')
+MEDIA_URL =  '/media/'
 
 
 
