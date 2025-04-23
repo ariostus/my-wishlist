@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div class="container">
+
 <div class="list-head">
     <h2>{{username}}'s Wishlists</h2>
     <h4>{{user_lists|length}} list{{user_lists|length|pluralize}}</h4>
     
     <hr style="margin-top:5%"> 
 </div>
-</div>
+
 
 <div class="all-items">
 {% for wishlist in user_lists %}
