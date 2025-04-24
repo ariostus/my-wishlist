@@ -259,7 +259,7 @@ def listCreate(request, username):
 
             el.save()
 
-            return HttpResponseRedirect(reverse('wish-list', args=[username, el.title]))
+            return HttpResponseRedirect(reverse('wish-list', args=[username, el.id]))
 
 
     else:
