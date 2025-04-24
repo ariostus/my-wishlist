@@ -191,7 +191,7 @@ def listEdit(request, username, title):
             mylist.save()
                 
         
-        return HttpResponseRedirect(reverse('user-lists', args=[username]))
+        return HttpResponseRedirect(reverse('wish-list', args=[username, title]))
     
 
     else:
@@ -259,7 +259,7 @@ def listCreate(request, username):
 
             el.save()
 
-            return HttpResponseRedirect(reverse('user-lists', args=[username]))
+            return HttpResponseRedirect(reverse('wish-list', args=[username, el.title]))
 
 
     else:
